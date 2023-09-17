@@ -6,7 +6,6 @@ from datetime import datetime
 import firebase_admin
 from firebase_admin import credentials, firestore
 from firebase_admin import db
-import time
 
 # Fetch the service account key JSON file contents
 cred = credentials.Certificate('serviceAccountKey.json')
@@ -137,10 +136,3 @@ pages = {"/":"<|toggle|theme|>\n<center>\n<|navbar|>\n</center>",
          "View":page,}
 
 Gui(pages=pages).run(use_reloader=True)
-
-while True:
-    # Your command or code to be executed goes here
-    print("This command runs every 30 seconds.")
-    
-    # Sleep for 30 seconds
-    time.sleep(3000)
